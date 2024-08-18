@@ -7,6 +7,12 @@
     <title>Encriptador de texto</title>
   </head>
   <body>
+    <header>
+        <div class="header">
+            <img src="./img/alura.jpg" class="img-header" alt="">
+            <h1>Encriptador de Texto</h1>
+        </div>
+    </header>
     <main class="contenedor-principal">
       <div class="contenedor-encriptar">
         <textarea
@@ -25,16 +31,18 @@
           <button onclick="encriptarTexto();" class="btn-encriptar">
             Encriptar
           </button>
-          <button onclick="desencriptarTexto();" class="btn-descencriptar">
+          <button onclick="desencriptarTexto();" class="btn-desencriptar">
             Desencriptar
           </button>
         </div>
       </div>
       <div class="contenedor-desencriptar">
-        <img src="" alt="" />
-        <div class="mensaje-desencriptado">
+        <div class="mensaje-inicial" id="mensaje-inicial" style="display: flex">
+          <img src="./img/img.png" class="img-mensaje" alt="" />
           <h2>Ningun mensaje fue encontrado</h2>
           <p>Ingrese el texto que desea encriptar o desencriptar</p>
+        </div>
+        <div class="mensaje-encriptado" id="mensaje-encriptado" style="display: none">
           <textarea
             cols="30"
             rows="10"
@@ -42,7 +50,7 @@
             id="texto-salida"
             class="texto-salida"
           ></textarea>
-          <button onclick="copiar();">Copiar</button>
+          <button onclick="copiar();" class="btn-copiar">Copiar</button>
         </div>
       </div>
     </main>

@@ -10,38 +10,16 @@ function encriptarTexto() {
 }
 
 function encriptacion(texto) {
-  /* let textoEncriptado = "";
-  for (let x in texto) {
-    if (texto[x] == "a") {
-      textoEncriptado += "ai";
-    } else {
-      if (texto[x] == "e") {
-        textoEncriptado += "enter";
-      } else {
-        if (texto[x] == "i") {
-          textoEncriptado += "imes";
-        } else {
-          if (texto[x] == "o") {
-            textoEncriptado += "ober";
-          } else {
-            if (texto[x] == "u") {
-              textoEncriptado += "ufat";
-            } else {
-              textoEncriptado += texto[x];
-            }
-          }
-        }
-      }
-    }
-  }*/
   texto = texto.replaceAll("e", "enter");
   texto = texto.replaceAll("i", "imes");
   texto = texto.replaceAll("a", "ai");
   texto = texto.replaceAll("o", "ober");
   texto = texto.replaceAll("u", "ufat");
+  let div = document.getElementById("mensaje-inicial");
+  div.setAttribute("style", "display: none;");
+  document.getElementById("mensaje-encriptado").style.display = "flex";
   return texto;
 }
-
 function desencriptarTexto() {
   texto = document.getElementById("texto-entrada").value;
   textoDesEncriptado = desencriptacion(texto);
