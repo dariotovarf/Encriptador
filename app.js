@@ -25,10 +25,14 @@ function encriptacion(texto) {
   return texto;
 }
 function desencriptarTexto() {
-  texto = document.getElementById("texto-entrada").value;
-  textoDesEncriptado = desencriptacion(texto);
-  document.getElementById("texto-salida").innerHTML = textoDesEncriptado;
-  document.getElementById("texto-entrada").value = "";
+  if (texto == "") {
+    alert("Digite un texto valido");
+  } else {
+    texto = document.getElementById("texto-entrada").value;
+    textoDesEncriptado = desencriptacion(texto);
+    document.getElementById("texto-salida").innerHTML = textoDesEncriptado;
+    document.getElementById("texto-entrada").value = "";
+  }
 }
 function desencriptacion(texto) {
   //let textoDesEncriptado = "";
