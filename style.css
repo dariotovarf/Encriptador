@@ -57,12 +57,24 @@ body {
   outline: none;
 }
 
+.restricciones {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .restricciones p {
   font-size: 16px;
   color: gray;
   font-family: "Inter";
   font-weight: 400;
-  flex: none;
+ 
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  background-image: url("./img/atencion.jpg");
+  background-size: cover;
 }
 .contenedor-botones {
   display: flex;
@@ -91,9 +103,11 @@ body {
   font-size: 24px;
   border-color: #0a3871;
 }
-.btn-encriptar:hover,
+.btn-encriptar:hover {
+  background-color: #2064bd;
+}
 .btn-desencriptar:hover {
-  padding: 1.8%;
+  background-color: #a4bfe2;
 }
 
 .contenedor-desencriptar {
@@ -157,7 +171,7 @@ body {
 
 .btn-copiar {
   color: #0a3871;
-  background-color: #dbdfec;
+  background-color: #c5ceee;
   width: 50%;
   padding: 2%;
   border-radius: 24px;
@@ -165,7 +179,9 @@ body {
   font-size: 24px;
   border-color: #0a3871;
 }
-
+.btn-copiar:hover {
+  background-color: #a4bfe2;
+}
 @media (max-width: 768px) {
   .header {
     padding-left: 1px;
@@ -213,6 +229,6 @@ body {
   }
   .mensaje-inicial {
     align-items: center;
-    justify-content:center;
+    justify-content: center;
   }
 }

@@ -4,9 +4,13 @@ let textoDesEncriptado = "";
 
 function encriptarTexto() {
   texto = document.getElementById("texto-entrada").value;
-  textoEncriptado = encriptacion(texto);
-  document.getElementById("texto-salida").innerHTML = textoEncriptado;
-  document.getElementById("texto-entrada").value = "";
+  if (texto == "") {
+    alert("Digite un texto valido");
+  } else {
+    textoEncriptado = encriptacion(texto);
+    document.getElementById("texto-salida").innerHTML = textoEncriptado;
+    document.getElementById("texto-entrada").value = "";
+  }
 }
 
 function encriptacion(texto) {
